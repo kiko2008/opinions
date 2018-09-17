@@ -1,0 +1,45 @@
+@import 'utils';
+
+
+$white: #fefefe;
+$gray: #373737;
+$darkgray: #2A2A2A;
+$lightgray: #989898;
+$rose: #CC4D86;
+$darkwhite: #F4F4F4;
+$red: red;
+
+$background-color: $white;
+$secondary-color: $darkwhite;
+$border-color: $lightgray;
+$primary-header-color: $darkgray;
+$secondary-header-color: $gray;
+$primary-text-color: $lightgray;
+$important-text-color: $rose;
+
+$error: $red;
+
+$box-shadow-default: 1px -5px 5px -5px $gray;
+
+$font-size-xxxl: 36;
+$font-size-xxl: 24;
+$font-size-xl: 20;
+$font-size-l: 16;
+$font-size: 14;
+$font-size-xs: 10;
+$font-size-xxs: 8;
+
+$gutter-padding: 30px;
+
+$font-family: 'PT Serif', serif;
+$font-family-main: 'Poppins', sans-serif;
+
+
+// Breakpoints
+
+$breakpoint-tablet-portrait: 600px;
+$breakpoint-tablet-landscape: 900px;
+$breakpoint-desktop: 1200px;
+
+$header-height: 350px;
+$footer-height: 150px;

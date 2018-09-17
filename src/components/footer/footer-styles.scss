@@ -1,0 +1,34 @@
+@import '~styles/settings';
+
+footer {
+  
+  height: $footer-height;
+  box-sizing: border-box;
+  position: fixed;
+  background-color: $white;
+  bottom: 0;
+  width: 100%;
+  padding: $gutter-padding $gutter-padding;
+  color: $lightgray;
+  border-top: 1px solid $border-color;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; 
+
+  .title-container {    
+    .comment-icon {
+      font-size: 2em;
+      color: $lightgray;
+      padding-right: 5px;
+    }
+    .copiright {
+      font-size: $font-size-xs;
+      padding: 10px 0;
+    }
+  }
+  .social-icon{
+    font-size: 30px;
+    padding: 0 10px;
+  }
+  
+}

@@ -1,0 +1,10 @@
+.hidden {
+  visibility: hidden;
+}
+.modal {
+  position: absolute;
+  top: $header-height;
+  bottom: $footer-height;
+  width: 100%;
+  background-color: $white;
+}

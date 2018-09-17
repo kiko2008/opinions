@@ -1,0 +1,127 @@
+@import '~styles/settings.scss';
+@import '~styles/layout.scss';
+
+header {
+  .header-principal {
+    background-color: $primary-header-color;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 89px;
+    padding: 0 $gutter-padding;
+
+    .title-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .title {
+        color: $white;
+      }
+
+      .logo {
+        padding-left: 5px;
+        height: 40px;
+      }
+    }
+    .menu {
+      @include fontSize($font-size-l);
+      color: $primary-text-color;
+      padding: $gutter-padding 10px;
+      display: flex;
+      align-items: center;
+      
+      .login {            
+        display: flex;
+        
+        input {
+          height: 20px;
+          padding: 5px 5px 5px 25px;
+          font-size: 13px;
+          font-weight: normal;
+          vertical-align: middle;
+          color: lighten($primary-text-color, 10%);
+          border: none;
+          background-position: 7px 50%;
+          border-radius: 4px;
+        }
+
+        a {
+          font-weight: bold;
+          text-transform: uppercase;
+          text-decoration: none;
+          padding: 0px 10px;
+          color: $important-text-color;
+          @include fontSize($font-size-l);
+        }
+      }
+    
+      a {
+        
+        &:hover {
+          color: lighten($primary-text-color, 25%);
+        }
+
+        display: none;
+
+        &.hamburger-icon {
+          display: block;
+          position: relative;
+        }
+        @include for-tablet-portrait {
+          display: block;
+          &.hamburger-icon {
+            display: none;
+          }
+        }
+        &.menu-active {
+          color: $white;
+        }
+      }
+    }
+
+    .comment-icon {
+      font-size: 3em;
+      color: $white;
+      padding-right: 5px;
+    }
+
+    &.menu-open {
+      flex-direction: column;
+
+      .title-container {
+        width: 100%;
+      }
+
+      .menu {
+        flex-direction: column;
+      }
+
+      a {
+        display: block;
+        text-align: center;
+        &.hamburger-icon {
+          position: absolute;
+          top: 3px;
+          right: 30px;
+          display: block;
+        }
+      }
+    }
+  }
+
+  .header-categories {
+    height: 4em;
+    border-top: 1px solid $border-color;
+    border-bottom: 1px solid $border-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    a {
+      font-weight: bold;
+      color: $lightgray;
+      text-decoration: none;
+      padding: 0px $gutter-padding;
+    }
+  }
+}
