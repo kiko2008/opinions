@@ -1,0 +1,108 @@
+@import '~styles/settings';
+@import '~styles/utils';
+
+
+.opinion {
+  margin: $gutter-padding / 2;
+  display: flex;
+  .opinion-image-container {
+    
+    justify-content: center;
+    .opinion-image {
+      width: 350px;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+  }
+  .opinion-title-container {
+    padding: 0px 5px;
+    .opinion-title {
+      text-decoration: none;
+      @include fontSize($font-size-xl);
+      font-weight: bold;      
+      margin-top: 5px;
+      margin-bottom: 0;
+      color: $secondary-text-color;
+    }
+  } 
+
+  .opinion-author {
+    align-items: center;
+    margin-top: 2px;
+    text-transform: uppercase;
+    @include fontSize($font-size);
+    color: $primary-text-color;
+  }
+}
+
+#opinion-notice {
+  display: block;
+  width: 100%;
+  text-transform: uppercase;
+  color: $primary-text-color;
+  padding: $gutter-padding;
+}
+
+#opinion-form {
+  width: 100%;
+  margin: 0 $gutter-padding / 2;
+
+  @include for-tablet-portrait {
+    width: 70%;
+  }
+  display: flex;
+  flex-wrap: wrap;
+
+  .opinion-form-field {
+    padding: $gutter-padding / 2 0;
+    width: 100%;
+    &:not(.opinion-textarea) {
+      @include for-tablet-landscape {
+        width: 33.3333%;
+        padding-right: $gutter-padding;
+        box-sizing: border-box;
+      }
+    }
+
+    label {
+      display: block;
+      width: 100%;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      color: $primary-text-color;
+    }
+
+    input {
+      display: block;
+      width: 100%;
+      border: 0;
+      border-bottom: solid 1px $border-color;
+
+      &.error {
+        border-color: $error;
+      }
+
+      &.focus {
+        border-color: blue;
+      }
+    }
+
+    textarea {
+      @extend input;
+      min-height: 4em;
+      border: solid 1px $border-color;
+      @include for-tablet-landscape {
+        width: 100%;
+      }
+    }
+  }
+
+  #opinion-form-submit {
+    display: block;
+    width: 100%;
+    background-color: $primary-text-color;
+    color: $white;
+    padding: 10px;
+  }
+}

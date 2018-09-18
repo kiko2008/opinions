@@ -7,6 +7,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    
     min-height: 89px;
     padding: 0 $gutter-padding;
 
@@ -30,22 +31,12 @@ header {
       padding: $gutter-padding 10px;
       display: flex;
       align-items: center;
-      
-      .login {            
-        display: flex;
-        
-        input {
-          height: 20px;
-          padding: 5px 5px 5px 25px;
-          font-size: 13px;
-          font-weight: normal;
-          vertical-align: middle;
-          color: lighten($primary-text-color, 10%);
-          border: none;
-          background-position: 7px 50%;
-          border-radius: 4px;
-        }
-
+     
+      .login {   
+        display: none;
+        @include for-tablet-landscape {
+          display: flex;
+        }    
         a {
           font-weight: bold;
           text-transform: uppercase;
@@ -53,22 +44,37 @@ header {
           padding: 0px 10px;
           color: $important-text-color;
           @include fontSize($font-size-l);
-        }
+        }        
       }
-    
-      a {
-        
+
+      input {
+        height: 20px;
+        padding: 5px 5px 5px 25px;
+        font-size: 13px;
+        font-weight: normal;
+        vertical-align: middle;
+        color: lighten($primary-text-color, 10%);
+        border: none;
+        background-position: 7px 50%;
+        border-radius: 4px;
+        display: none;
+        @include for-tablet-landscape {
+          display: flex;
+        } 
+      }
+
+      a {        
         &:hover {
           color: lighten($primary-text-color, 25%);
         }
 
-        display: none;
-
         &.hamburger-icon {
           display: block;
           position: relative;
+          color: $white;
+          font-size: 2.5rem;
         }
-        @include for-tablet-portrait {
+        @include for-tablet-landscape {
           display: block;
           &.hamburger-icon {
             display: none;
@@ -86,13 +92,12 @@ header {
       padding-right: 5px;
     }
 
-    &.menu-open {
+    .menu-open {
       flex-direction: column;
 
-      .title-container {
+      
         width: 100%;
-      }
-
+      
       .menu {
         flex-direction: column;
       }
