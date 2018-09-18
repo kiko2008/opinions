@@ -43,205 +43,59 @@
       "id": 6
     }
   ],
-  "songs": [
+  "opinions": [
     {
       "id": 1,
-      "title": "Muddy Waters at Newport",
+      "title": "Titulo de ejemplo",
+      "intro": "Este texto de introduccion es para mostrar de que va el articulo, puede ser de 2 a 5 lineas",
       "author": "Muddy Waters",
-      "imageUrl": "https://cps-static.rovicorp.com/3/JPG_1080/MI0001/751/MI0001751172.jpg?partner=allrovi.com",
-      "description": "<div>Muddy Waters was a great bluesman</div><div>Muddy Waters was a great bluesman</div><div>Muddy Waters was a great bluesman</div><div>Muddy Waters was a great bluesman</div><div>Muddy Waters was a great bluesman</div>"
+      "photoAuthor": "Muddy Waters",
+      "mediaUrl": "https://cps-static.rovicorp.com/3/JPG_1080/MI0001/751/MI0001751172.jpg?partner=allrovi.com",
+      "description": "<div>Muddy Waters was a great bluesman</div><div>Muddy Waters was a great bluesman</div><div>Muddy Waters was a great bluesman</div><div>Muddy Waters was a great bluesman</div><div>Muddy Waters was a great bluesman</div>",
+      "publicDate": "10/01/2018 13:10:14",
+      "numComments": "5"
     },
     {
       "id": 2,
       "title": "GOA",
+      "intro": "Este texto de introduccion es para mostrar de que va el articulo, puede ser de 2 a 5 lineas Numero 222222",
       "author": "GOA",
-      "imageUrl": "https://cps-static.rovicorp.com/3/JPG_1080/MI0001/751/MI0001751173.jpg?partner=allrovi.com"
+      "photoAuthor": "Muddy Waters",
+      "mediaUrl": "https://cps-static.rovicorp.com/3/JPG_1080/MI0001/751/MI0001751172.jpg?partner=allrovi.com",
+      "description": "<div>Muddy Waters was a great bluesman</div><div>Muddy Waters was a great bluesman</div><div>Muddy Waters was a great bluesman</div><div>Muddy Waters was a great bluesman</div><div>Muddy Waters was a great bluesman</div>",
+      "publicDate": "10/01/2018 13:10:14",
+      "numComments": "2"
     },
     {
       "id": 3,
       "title": "The sand",
       "author": "Muddy Waters",
-      "imageUrl": "https://cps-static.rovicorp.com/3/JPG_1080/MI0001/751/MI0001751174.jpg?partner=allrovi.com"
+      "photoAuthor": "Muddy Waters",
+      "mediaUrl": "https://cps-static.rovicorp.com/3/JPG_1080/MI0001/751/MI0001751172.jpg?partner=allrovi.com",
+      "description": "<div>Muddy Waters was a great bluesman</div><div>Muddy Waters was a great bluesman</div><div>Muddy Waters was a great bluesman</div><div>Muddy Waters was a great bluesman</div><div>Muddy Waters was a great bluesman</div>",
+      "publicDate": "10/01/2018 13:10:14",
+      "numComments": "1"
+
     },
     {
-      "id": 4,
+      "id": 5,
       "title": "Snow",
       "author": "Muddy Waters",
-      "imageUrl": "https://cps-static.rovicorp.com/3/JPG_1080/MI0001/751/MI0001751175.jpg?partner=allrovi.com"
+      "photoAuthor": "Muddy Waters",
+      "mediaUrl": "https://cps-static.rovicorp.com/3/JPG_1080/MI0001/751/MI0001751172.jpg?partner=allrovi.com",
+      "description": "<div>Muddy Waters was a great bluesman</div><div>Muddy Waters was a great bluesman</div><div>Muddy Waters was a great bluesman</div><div>Muddy Waters was a great bluesman</div><div>Muddy Waters was a great bluesman</div>",
+      "publicDate": "10/01/2018 13:10:14",
+      "numComments": "1"
     },
     {
+      "id": 6,
       "title": "A love supreme",
       "author": "John Coltrane",
-      "imageUrl": "https://cps-static.rovicorp.com/3/JPG_400/MI0004/433/MI0004433473.jpg?partner=allrovi.com",
-      "id": 5
-    },
-    {
-      "title": "Hola",
-      "author": "lala",
-      "imageUrl": "",
-      "id": 6
-    },
-    {
-      "title": "asdfasd",
-      "author": "ass",
-      "imageUrl": "as",
-      "id": 7
-    },
-    {
-      "title": "sfads",
-      "author": "adfsfdas",
-      "imageUrl": "fasdsa",
-      "id": 8
-    },
-    {
-      "title": "sdadsa",
-      "author": "sdadas",
-      "imageUrl": "asd",
-      "id": 9
-    },
-    {
-      "title": "sdadsa",
-      "author": "sdadas",
-      "imageUrl": "asd",
-      "id": 9
-    },
-    {
-      "title": "sdadsa",
-      "author": "sdadas",
-      "imageUrl": "asd",
-      "id": 9
-    },
-    {
-      "title": "sdadsa",
-      "author": "sdadas",
-      "imageUrl": "asd",
-      "id": 9
-    },
-    {
-      "title": "sdadsa",
-      "author": "sdadas",
-      "imageUrl": "asd",
-      "id": 9
-    },
-    {
-      "title": "sdadsa",
-      "author": "sdadas",
-      "imageUrl": "asd",
-      "id": 9
-    },
-    {
-      "title": "sdadsa",
-      "author": "sdadas",
-      "imageUrl": "asd",
-      "id": 9
-    },
-    {
-      "title": "sdadsa",
-      "author": "sdadas",
-      "imageUrl": "asd",
-      "id": 9
-    },
-    {
-      "title": "sdadsa",
-      "author": "sdadas",
-      "imageUrl": "asd",
-      "id": 9
-    },
-    {
-      "title": "sdadsa",
-      "author": "sdadas",
-      "imageUrl": "asd",
-      "id": 9
-    },
-    {
-      "title": "sdadsa",
-      "author": "sdadas",
-      "imageUrl": "asd",
-      "id": 9
-    },
-    {
-      "title": "sdadsa",
-      "author": "sdadas",
-      "imageUrl": "asd",
-      "id": 9
-    },
-    {
-      "title": "sdadsa",
-      "author": "sdadas",
-      "imageUrl": "asd",
-      "id": 9
-    },
-    {
-      "title": "sdadsa",
-      "author": "sdadas",
-      "imageUrl": "asd",
-      "id": 9
-    },
-    {
-      "title": "sdadsa",
-      "author": "sdadas",
-      "imageUrl": "asd",
-      "id": 9
-    },
-    {
-      "title": "sdadsa",
-      "author": "sdadas",
-      "imageUrl": "asd",
-      "id": 9
-    },
-    {
-      "title": "sdadsa",
-      "author": "sdadas",
-      "imageUrl": "asd",
-      "id": 9
-    },
-    {
-      "title": "sdadsa",
-      "author": "sdadas",
-      "imageUrl": "asd",
-      "id": 9
-    },
-    {
-      "title": "sdadsa",
-      "author": "sdadas",
-      "imageUrl": "asd",
-      "id": 9
-    },
-    {
-      "title": "sdadsa",
-      "author": "sdadas",
-      "imageUrl": "asd",
-      "id": 9
-    },
-    {
-      "title": "sdadsa",
-      "author": "sdadas",
-      "imageUrl": "asd",
-      "id": 9
-    },
-    {
-      "title": "sdadsa",
-      "author": "sdadas",
-      "imageUrl": "asd",
-      "id": 9
-    },
-    {
-      "title": "sdadsa",
-      "author": "sdadas",
-      "imageUrl": "asd",
-      "id": 9
-    },
-    {
-      "title": "sdadsa",
-      "author": "sdadas",
-      "imageUrl": "asd",
-      "id": 9
-    },
-    {
-      "title": "sdadsa",
-      "author": "sdadas",
-      "imageUrl": "asd",
-      "id": 9
+      "photoAuthor": "Muddy Waters",
+      "mediaUrl": "https://cps-static.rovicorp.com/3/JPG_1080/MI0001/751/MI0001751172.jpg?partner=allrovi.com",
+      "description": "<div>Muddy Waters was a great bluesman</div><div>Muddy Waters was a great bluesman</div><div>Muddy Waters was a great bluesman</div><div>Muddy Waters was a great bluesman</div><div>Muddy Waters was a great bluesman</div>",
+      "publicDate": "10/01/2018 13:10:14",
+      "numComments": "1"
     }
   ]
 }
