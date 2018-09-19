@@ -4,36 +4,40 @@
 
 .opinion {
   margin: $gutter-padding / 2;
-  display: flex;
-  .opinion-image-container {
-    
-    justify-content: center;
-    .opinion-image {
-      width: 350px;
-      height: 250px;
-      object-fit: cover;
-      border-radius: 10px;
+  @include for-tablet-landscape {
+    display: flex;
+  }      
+    .opinion-image-container { 
+      .opinion-image {
+        width: 350px;
+        height: 250px;
+        object-fit: cover;
+        border-radius: 10px;
+      }
     }
-  }
-  .opinion-title-container {
-    padding: 0px 5px;
-    .opinion-title {
-      text-decoration: none;
-      @include fontSize($font-size-xl);
-      font-weight: bold;      
-      margin-top: 5px;
-      margin-bottom: 0;
-      color: $secondary-text-color;
+    .opinion-title-container {
+      padding: 0px 5px;
+      .opinion-title {
+        text-decoration: none;
+        @include fontSize($font-size-xl);
+        font-weight: bold;      
+        margin-top: 5px;
+        margin-bottom: 0;
+        color: $secondary-text-color;
+      }
+      .opinion-author {
+        margin-top: 2px;
+        text-transform: uppercase;
+        @include fontSize($font-size);
+        color: $primary-text-color;
+      }
+      .opinion-description {
+        width: 250px;
+        height: 250px;
+      }
     }
-  } 
-
-  .opinion-author {
-    align-items: center;
-    margin-top: 2px;
-    text-transform: uppercase;
-    @include fontSize($font-size);
-    color: $primary-text-color;
-  }
+  
+  
 }
 
 #opinion-notice {

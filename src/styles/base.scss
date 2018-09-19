@@ -4,15 +4,12 @@
 
 body {
   padding-bottom: $footer-height + 60px;
+  font-family: $font-family-main;
 }
 
 h1 {
   @include fontSize($font-size-xxxl);
-  font-family: $font-family-main;
-}
-
-p, div {
-  font-family: $font-family;
+  
 }
 
 .container {
