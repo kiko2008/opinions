@@ -1,0 +1,76 @@
+@import '~styles/settings';
+@import '~styles/utils';
+
+.opinion-detail {
+  width: 100%;
+
+  .opinion-image {
+    max-width: 100%;
+  }
+  .title-category {
+    text-transform: uppercase;
+    color: $important-text-color;
+    font-family: $font-family-detail-category;
+    font-weight: 600;
+    @include fontSize($font-size-l);
+  }
+
+  .title-container {
+    display: flex;
+    margin-left: 10px;
+    width: 80%;
+    flex-direction: column;
+
+    .opinion-title {
+      @include fontSize($font-size-xxl);
+      margin-top: 5px;
+      margin-bottom: 0;
+      color: $secondary-text-color;
+    }    
+  }
+
+  .description-detail-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .opinion-detail-description { 
+      line-height: 1.70;
+      color: $primary-text-color;   
+      width:80%;
+      font-family: $font-family-detail-description;
+      font-weight: 400;
+      @include fontSize($font-size);
+    }
+  }
+
+  .opinion-image-author {
+    max-width: 60px;
+    border-radius: 40px;
+  }
+
+  .opinion-author {
+    margin-left: 10px;
+    margin-top: 2px;
+    text-transform: uppercase;
+    color: $secondary-text-color;
+    font-family: $font-family-detail-category;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  .back {
+    margin-top: 5px;
+    margin-left: 20px;
+    color: $important-text-color;
+    text-decoration: none;
+    @include fontSize($font-size-xxxxl);
+  }
+
+  .like-button {
+    outline-width: 0;
+    @include fontSize($font-size-xl);
+    background-color: transparent;
+    color: $important-text-color;
+    border: none;
+  }  
+}

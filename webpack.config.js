@@ -26,7 +26,8 @@ var page = function({ title, template, chunks, filename }) {
 
 var commonConfig = {
   entry: {
-    opinions: ['babel-polyfill', 'whatwg-fetch', path.join(__dirname, 'src', 'pages', 'opinions', 'index')]
+    opinions: ['babel-polyfill', 'whatwg-fetch', path.join(__dirname, 'src', 'pages', 'opinions', 'index')],
+    opinion: ['babel-polyfill', 'whatwg-fetch', path.join(__dirname, 'src', 'pages', 'opinion', 'index')]
   },
   output: {
     filename: '[name][hash].js',
@@ -39,6 +40,12 @@ var commonConfig = {
       template: path.join(__dirname, 'src', 'pages', 'opinions', 'index.html'),
       chunks: ['opinions'],
       filename: path.resolve(__dirname, 'dist', 'index.html')
+    }),
+    page({
+      title: 'Opinion',
+      template: path.join(__dirname, 'src', 'pages', 'opinion', 'index.html'),
+      chunks: ['opinion'],
+      filename: path.resolve(__dirname, 'dist', 'opinion', 'index.html')
     })
   ],
   module: {
