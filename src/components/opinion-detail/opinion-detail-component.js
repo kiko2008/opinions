@@ -48,14 +48,8 @@ export const updateOpinionDetail = ({
     <p title="Author" class="opinion-author">
       <img src="${photoAuthor}" class="opinion-image-author" ></img>
       <span>${author}</span>
-    </p>    
-    
-    <div>
-      <a title="back" class="back" href='javascript:history.back()'>
-        <i class="fas fa-chevron-circle-left"></i>
-      </a>
-    </div>   
-  `;
+    </p>
+    <input type="hidden" id="idOpinion" value=${id} />`;
 
   const likeButton = document.getElementById('like-button');
 

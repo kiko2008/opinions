@@ -46,6 +46,7 @@
   .opinion-image-author {
     max-width: 60px;
     border-radius: 40px;
+    padding-right: 10px;
   }
 
   .opinion-author {
@@ -56,6 +57,11 @@
     font-family: $font-family-detail-category;
     font-weight: 600;
     text-align: center;
+    justify-content: center;
+    display: flex;
+    height: 60px;
+    align-items: center;
+    margin-right: 30px;
   }
 
   .back {

@@ -1,0 +1,150 @@
+@import '~styles/settings';
+@import '~styles/utils';
+
+
+// .container {	
+//	max-width: 100%;
+//	display: flex;	
+//	flex-direction: column;
+//}
+
+.card-comments{
+	margin:0 auto;	
+	max-width: 80%;
+	width: 100%;
+
+	background:#fff;	
+	box-shadow:0 1px 4px rgba(0,0,0,.04);
+	border:1px solid rgba(0,0,0,.09);	
+	border-radius:3px;
+	margin-top: 20px;	
+	padding-top: 10px;
+	padding-bottom: 15px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.flex-center{
+	display: flex;	
+	align-items: center;
+}
+
+.avatar-image{
+	width:56px;
+	height:56px;		
+	border-radius:100%;	
+}
+
+.name-comment{
+  @include fontSize($font-size-xl);
+	line-height:1.4;
+	padding-left:10px;	
+	
+}
+
+.email-comment {
+  color: $primary-text-color;
+  @include fontSize($font-size);
+}
+
+.section-comment{
+	max-width:700px;
+	width:80%;
+	margin:0 auto;			
+}
+
+.comment-form-wrapper {
+  flex-direction: column;
+}
+
+#notice {
+  display: block;
+  width: 100%;
+  text-transform: uppercase;
+  color: $important-text-color;
+  padding: $gutter-padding;
+}
+
+#comment-form {
+  width: 100%;
+  margin: 0 $gutter-padding / 2;
+
+  @include for-tablet-portrait {
+    width: 70%;
+  }
+  display: flex;
+  flex-wrap: wrap;
+
+  .comment-form-field {
+    padding: $gutter-padding / 2 0;
+    width: 100%;
+    &:not(.comment-textarea) {
+      @include for-tablet-landscape {
+        width: 33.3333%;
+        padding-right: $gutter-padding;
+        box-sizing: border-box;
+      }
+    }
+
+    label {
+      display: block;
+      width: 100%;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      color: $primary-text-color;
+    }
+
+    input {
+      display: block;
+      width: 100%;
+      border: 0;
+      border-bottom: solid 1px $border-color;
+
+      &.error {
+        border-color: red;
+      }
+
+      &.focus {
+        border-color: $border-color;
+      }
+    }
+
+    textarea {
+      @extend input;
+      min-height: 4em;
+      border: solid 1px $border-color;
+      @include for-tablet-landscape {
+        width: 100%;
+      }
+    }
+  }
+
+  #comment-form-submit, #comment-form-cancel {
+    display: block;
+    text-align: center;
+    max-width: 30%;
+    width: 30%;
+    background-color: $background-color;
+    border: 1px solid rgba(204,77,134,0.5);
+    color: $important-text-color;
+    padding: 10px;
+    margin: 5px 5px;
+  }
+
+  #comment-form-cancel {
+    display: block;
+    max-width: 30%;
+    width: 30%;
+    background-color: $background-color;
+    color: $important-text-color;
+    padding: 10px;
+  }
+}
+
+.hide {
+  display: none;
+}
+
+.important-text {
+  color: $important-text-color;
+}

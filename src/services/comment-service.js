@@ -1,10 +1,14 @@
 import APIService from './API-service';
 
-class MessageService {
+class CommentService {
   constructor() {
     this.baseUrl = process.env.API_URL;
     this.APIServiceInstance = new APIService();
-    this.model = 'messages';
+    this.model = 'comments';
+  }
+
+  async getComments(idOpinion) {
+    return this.APIServiceInstance.get(`${this.model}/?idOpinion=${idOpinion}`);
   }
 
   async postMessage(message) {
@@ -12,4 +16,4 @@ class MessageService {
   }
 }
 
-export default MessageService;
+export default CommentService;

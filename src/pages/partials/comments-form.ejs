@@ -1,0 +1,30 @@
+<div class="card-comments" id="create-comment">
+  <div class="flex-center">
+    <p id="label-create-comments" class="important-text">Escribir un comentario</p>
+    <div class="comment-form-wrapper hide" id="comment-wrapper">          
+      <form id="comment-form">
+        <div class="comment-form-field">
+          <label for="name">Nombre <span class="important-text">*</span></label>
+          <input class="comment-input" type="text" name="name" id="comment-form-name" required>
+        </div>
+        <div class="comment-form-field">
+          <label for="last-name">Apellidos <span class="important-text">*</span></label>
+          <input class="comment-input" type="text" name="lastName" id="comment-form-last-name" required>
+        </div>
+        <div class="comment-form-field">
+          <label for="email">Email <span class="important-text">*</span></label>
+          <input class="comment-input" type="email" name="email" id="comment-form-email" required>
+        </div>
+        <div class="comment-form-field comment-textarea">
+          <label for="message">Comentario <span class="important-text">*</span></label>
+          <textarea class="comment-input" name="comment" id="comment-form-message" required maxlength="10"
+                    placeholder="Escribe un mensaje de no más de 500 caracteres"></textarea>
+        </div>
+        <input type="submit" value="Submit" id="comment-form-submit" />
+        <input type="button" value="Cancel" id="comment-form-cancel" />
+      </form>
+      <div id="notice"></div>
+      </div>
+    </div>
+  </div>
+</div>	
