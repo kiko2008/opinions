@@ -9,7 +9,10 @@
   }      
     .opinion-image-container { 
       .opinion-image {
-        width: 350px;
+        width: 250px;
+        @include for-tablet-landscape {
+          width: 450px;
+        }
         height: 250px;
         object-fit: cover;
         border-radius: 10px;

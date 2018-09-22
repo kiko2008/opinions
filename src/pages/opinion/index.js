@@ -14,7 +14,9 @@ if (opinionId) {
     updateOpinionDetail(opinionJSON);
     PubSub.subscribe('reload', () => {
       createOpinionDetailComments(opinionId);   
-    });    
+    });
+    createOpinionDetailComments(opinionId);      
   });
 }
+updateHeader({ title: 'pinions', active: 'opinion' });
 updateCommentForm();

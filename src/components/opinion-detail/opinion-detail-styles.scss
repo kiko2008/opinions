@@ -11,8 +11,11 @@
     text-transform: uppercase;
     color: $important-text-color;
     font-family: $font-family-detail-category;
-    font-weight: 600;
+    font-weight: 600;    
     @include fontSize($font-size-l);
+    @include for-tablet-landscape {
+      @include fontSize($font-size-xxl);
+    }
   }
 
   .title-container {
@@ -23,6 +26,9 @@
 
     .opinion-title {
       @include fontSize($font-size-xxl);
+      @include for-tablet-landscape {
+        @include fontSize($font-size-xxxl);
+      }
       margin-top: 5px;
       margin-bottom: 0;
       color: $secondary-text-color;
@@ -39,7 +45,9 @@
       width:80%;
       font-family: $font-family-detail-description;
       font-weight: 400;
-      @include fontSize($font-size);
+      @include for-tablet-landscape {
+        @include fontSize($font-size-xxl);
+      }
     }
   }
 
@@ -62,6 +70,9 @@
     height: 60px;
     align-items: center;
     margin-right: 30px;
+    @include for-tablet-landscape {
+      @include fontSize($font-size-xxl);
+    }
   }
 
   .back {
@@ -75,6 +86,9 @@
   .like-button {
     outline-width: 0;
     @include fontSize($font-size-xl);
+    @include for-tablet-landscape {
+      @include fontSize($font-size-xxxl);
+    }
     background-color: transparent;
     color: $important-text-color;
     border: none;

@@ -37,6 +37,9 @@
 
 .name-comment{
   @include fontSize($font-size-xl);
+  @include for-tablet-landscape {
+    @include fontSize($font-size-xxl);
+  }
 	line-height:1.4;
 	padding-left:10px;	
 	
@@ -45,12 +48,19 @@
 .email-comment {
   color: $primary-text-color;
   @include fontSize($font-size);
+  @include for-tablet-landscape {
+    @include fontSize($font-size-xl);
+  }
 }
 
 .section-comment{
 	max-width:700px;
 	width:80%;
-	margin:0 auto;			
+  margin:0 auto;	
+  @include fontSize($font-size);
+  @include for-tablet-landscape {
+    @include fontSize($font-size-xxl);
+  }		
 }
 
 .comment-form-wrapper {
@@ -63,6 +73,9 @@
   text-transform: uppercase;
   color: $important-text-color;
   padding: $gutter-padding;
+  @include for-tablet-landscape {
+    @include fontSize($font-size-xxl);
+  }
 }
 
 #comment-form {
@@ -131,14 +144,7 @@
     margin: 5px 5px;
   }
 
-  #comment-form-cancel {
-    display: block;
-    max-width: 30%;
-    width: 30%;
-    background-color: $background-color;
-    color: $important-text-color;
-    padding: 10px;
-  }
+ 
 }
 
 .hide {

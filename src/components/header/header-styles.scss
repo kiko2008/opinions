@@ -1,15 +1,50 @@
 @import '~styles/settings.scss';
 @import '~styles/layout.scss';
 
-header {
+header {  
+  &.menu-open {
+    .header-principal {
+      flex-direction: column;
+      .title-container {       
+        display: flex;
+        align-items: baseline;
+        justify-content: center;
+      }  
+      .menu {
+        width: 100%;    
+        flex-direction: column;
+        justify-content: center;
+        .menu-wrapper {        
+          .login {
+            width: 100%;
+            display: flex;
+            flex-direction: column; 
+            align-items: flex-end; 
+            margin-bottom: 15px;    
+          }
+
+          .search {
+            display: flex;
+          }
+        }
+        .hamburger-icon {
+          position: absolute;
+          top: 30px;
+          right: 40px;
+          display: block;
+        }
+      }
+    }
+  }
+
+  
   .header-principal {
     background-color: $primary-header-color;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    
+    justify-content: space-between;    
     min-height: 89px;
-    padding: 0 $gutter-padding;
+    padding: 0 30px;
 
     .title-container {
       display: flex;
@@ -20,47 +55,69 @@ header {
         color: $white;
       }
 
-      .logo {
-        padding-left: 5px;
-        height: 40px;
+      .comment-icon {
+        font-size: 3em;
+        color: $white;
+        padding-right: 5px;
       }
     }
+    
     .menu {
       @include fontSize($font-size-l);
       color: $primary-text-color;
       padding: $gutter-padding 10px;
-      display: flex;
-      align-items: center;
-     
-      .login {   
-        display: none;
+      .menu-wrapper{
+        display: flex;
+        align-items: initial;
+        flex-direction: column; 
         @include for-tablet-landscape {
-          display: flex;
-        }    
-        a {
-          font-weight: bold;
-          text-transform: uppercase;
-          text-decoration: none;
-          padding: 0px 10px;
-          color: $important-text-color;
-          @include fontSize($font-size-l);
-        }        
-      }
+          flex-direction: row;
+        }  
+        .login {   
+          display: none;
+          @include for-tablet-landscape {
+            display: flex;
+          }    
+          a {
+            font-weight: bold;
+            text-transform: uppercase;
+            text-decoration: none;
+            padding: 5px;
+            color: $important-text-color;
+            @include fontSize($font-size-l);
+            border: 1px solid $important-text-color;
+            border-radius: 30px;
+            width: 50%;
+            text-align: center;
+            margin-bottom: 15px;
+            @include for-tablet-landscape {
+              border: 0px;
+            }
+          }      
+          
+          .logUp {
+            display: none;
+            @include for-tablet-landscape {
+              display: flex;
+            } 
+          }    
+        }
 
-      input {
-        height: 20px;
-        padding: 5px 5px 5px 25px;
-        font-size: 13px;
-        font-weight: normal;
-        vertical-align: middle;
-        color: lighten($primary-text-color, 10%);
-        border: none;
-        background-position: 7px 50%;
-        border-radius: 4px;
-        display: none;
-        @include for-tablet-landscape {
-          display: flex;
-        } 
+        input {
+          height: 20px;
+          padding: 5px 5px 5px 25px;
+          @include fontSize($font-size-xl );
+          font-weight: normal;
+          vertical-align: middle;
+          color: $primary-text-color;
+          border: none;
+          background-position: 7px 50%;
+          border-radius: 10px;
+          display: none;
+          @include for-tablet-landscape {
+            display: flex;
+          } 
+        }      
       }
 
       a {        
@@ -72,7 +129,7 @@ header {
           display: block;
           position: relative;
           color: $white;
-          font-size: 2.5rem;
+          @include fontSize($font-size-xl);
         }
         @include for-tablet-landscape {
           display: block;
@@ -84,35 +141,7 @@ header {
           color: $white;
         }
       }
-    }
-
-    .comment-icon {
-      font-size: 3em;
-      color: $white;
-      padding-right: 5px;
-    }
-
-    .menu-open {
-      flex-direction: column;
-
-      
-        width: 100%;
-      
-      .menu {
-        flex-direction: column;
-      }
-
-      a {
-        display: block;
-        text-align: center;
-        &.hamburger-icon {
-          position: absolute;
-          top: 3px;
-          right: 30px;
-          display: block;
-        }
-      }
-    }
+    } 
   }
 
   .header-categories {
@@ -122,6 +151,10 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: row;
+    @include for-mobile {
+      flex-direction: column;
+    }  
     a {
       font-weight: bold;
       color: $lightgray;

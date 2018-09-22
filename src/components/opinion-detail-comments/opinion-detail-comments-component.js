@@ -6,8 +6,10 @@ export const createOpinionDetailComments = (idOpinion) => {
   const commentServiceInstance = new CommentService();
   const comments = document.getElementById('opinion-detail-comments');
   comments.innerHTML = '<i class="fas fa-spinner fa-spin"></i>';
+  
   commentServiceInstance.getComments(idOpinion).then((commentsJson) => {
     comments.innerHTML = '';
+
     loadComments(commentsJson, comments);
   }).catch(() => {
     comments.innerHTML = 'Uppsssss, errorr!!!!';

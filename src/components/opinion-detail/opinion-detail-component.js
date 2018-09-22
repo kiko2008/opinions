@@ -1,3 +1,4 @@
+import PubSub from 'pubsub-js';
 import meeseeksUrl from 'assets/nature-500.jpg';
 
 const isLiked = id => localStorage.getItem(`opinion-${id}`);
@@ -59,6 +60,7 @@ export const updateOpinionDetail = ({
     likeButton.children[0].classList.toggle('fas');
     toggleLike(id);
   });
+  PubSub.publish('reload');
 };
 
 export default {
