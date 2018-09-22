@@ -6,21 +6,19 @@ export const createOpinionDetailComments = (idOpinion) => {
   const commentServiceInstance = new CommentService();
   const comments = document.getElementById('opinion-detail-comments');
   comments.innerHTML = '<i class="fas fa-spinner fa-spin"></i>';
-  
+
   commentServiceInstance.getComments(idOpinion).then((commentsJson) => {
     comments.innerHTML = '';
-
     loadComments(commentsJson, comments);
   }).catch(() => {
-    comments.innerHTML = 'Uppsssss, errorr!!!!';
+    comments.innerHTML = '<p class="important">Uppsssss, errorr!!!!</p>';
   });
 };
 
 const loadComments = (commentsJson, comments) => {
   if (commentsJson.length === 0) {
-    comments.innerHTML = 'No hay comentarios';
-  } else {
-   
+    comments.innerHTML = '<p class="important">No hay comentarios</p>';
+  } else {   
     appendComponent(comments,
       commentsJson.map(commentsData => updateOpinionDetailComments(commentsData)));
   }
@@ -31,10 +29,9 @@ const updateOpinionDetailComments = ({
 }) => {
 
   const comments = document.createElement('div');
-  comments.classList.add('card-comments');
-    
+  comments.classList.add('card-comments');    
   comments.innerHTML = `<div class="flex-center">
-                            <img src="https://cdn-images-1.medium.com/fit/c/45/45/1*SOZiX-rlw1aj5Sgd_gFnUA.jpeg" 
+                            <img src="https://picsum.photos/100/100?image=1074" 
                                 class="avatar-image">				
                             <div class="name-comment">
                               ${ name } ${ lastName }
@@ -46,7 +43,7 @@ const updateOpinionDetailComments = ({
                               
                           <section>												
                             <div class="section-comment">
-                              <p> ${ comment }</p>
+                              <div> ${ comment }</div>
                             </div>							
                           </section>`;
   return comments;
@@ -75,12 +72,9 @@ export const updateCommentForm = () => {
 
   const createComment = document.getElementById('create-comment');
 
-  handleValidation(formInputs);
-
   submitFormButton.addEventListener('click', (e) => {
     e.preventDefault();
     submitFormButton.disable = true;
-    reportValidity(commentForm);
     if (commentForm.checkValidity()) {
       const commentServiceInstance = new CommentService();
       commentServiceInstance.postMessage(getFormData(formInputs)).then(
@@ -96,38 +90,6 @@ export const updateCommentForm = () => {
       submitFormButton.disable = false;
     }
   });
-};
-
-const addCustomValidation = (input) => {
-  if (input.value === input.value.toUpperCase()) {
-    input.setCustomValidity('No introduzcas todo el texto en mayúsculas');
-  } else {
-    input.setCustomValidity('');
-  }
-};
-
-const addErrorClass = (input) => {
-  if (!input.checkValidity()) {
-    input.classList.add('error');
-  } else {
-    input.classList.remove('error');
-  }
-};
-
-const handleValidation = (formInputs) => {
-  for (let i = 0; i < formInputs.length; i += 1) {
-    const input = formInputs[i];
-
-    input.addEventListener('focus', () => {
-      input.classList.add('focus');
-    });
-
-    input.addEventListener('blur', () => {
-      input.classList.remove('focus');
-      addCustomValidation(input);
-      addErrorClass(input);
-    });
-  }
 };
 
 export default {

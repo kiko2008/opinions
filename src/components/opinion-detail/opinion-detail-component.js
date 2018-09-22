@@ -1,5 +1,4 @@
 import PubSub from 'pubsub-js';
-import meeseeksUrl from 'assets/nature-500.jpg';
 
 const isLiked = id => localStorage.getItem(`opinion-${id}`);
 console.log("isLiked = " + isLiked);
@@ -7,8 +6,6 @@ console.log("isLiked = " + isLiked);
 
 const toggleLike = (id) => {
   const likeValue = isLiked(id) === 'true' ? 'false' : 'true';
-  console.log("isLiked toggle = " + likeValue);
-  console.log("id toggle = " + id);
   localStorage.setItem(`opinion-${id}`, likeValue);
 };
 
@@ -17,7 +14,7 @@ const setInitialLikeValue = (likeButton, liked) => {
 };
 
 export const updateOpinionDetail = ({
-  title, author, photoAuthor, mediaUrl, articleText, category, id
+  title, author, photoAuthor, photoUrl, videoUrl, articleText, category, id
 } = { title: 'No title', author: 'No author' }) => {
 
   const categoriesTag = document.getElementsByClassName('header-categories');
@@ -29,9 +26,21 @@ export const updateOpinionDetail = ({
     </div>`
   ) : '';
   
-  const image = mediaUrl !== '' ? mediaUrl : meeseeksUrl;
+  var media = '';
+  if(videoUrl != "") {
+    media = `<div class="video-container">${videoUrl}</div>`;
+  } else {
+    media = `<img src="${photoUrl}/320" 
+    srcset="${photoUrl}/320 320w,
+            ${photoUrl}/480 480w,
+            ${photoUrl}/800 800w,
+            ${photoUrl}/1200 1200w,
+            ${photoUrl}/1800 1800w"
+    class="opinion-image" alt="${title}"></img>`;
+  }
+
   opinion.innerHTML = `
-    <img src="${mediaUrl}" class="opinion-image" ></img>
+    ${ media }   
     <div class="title-container">
       <p title="opinion category" class="title-category">${category}</p>
       <h2 title="opinion title" class="opinion-title">

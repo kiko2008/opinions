@@ -6,7 +6,7 @@ import OpinionService from 'services/opinion-service';
 const loadOpinions = (opinionsJson, opinions) => {
   const updatedOpinions = opinions;
   if (opinionsJson.length === 0) {
-    updatedOpinions.innerHTML = 'No opinions';
+    updatedOpinions.innerHTML = '<p class="important">No hay ninguna opinion!!</p>';
   } else {
     appendComponent(updatedOpinions,
       opinionsJson.map(opinionData => createOpinion(opinionData)));
@@ -21,7 +21,7 @@ export const updateOpinions = () => {
     opinions.innerHTML = '';
     loadOpinions(opinionsJson, opinions);
   }).catch(() => {
-    opinions.innerHTML = 'There was an error, please reload';
+    opinions.innerHTML = '<p class="important">Uppssss, error!!</p>';
   });
 };
 

@@ -4,6 +4,19 @@
 .opinion-detail {
   width: 100%;
 
+  .video-container {
+     position: relative;
+     height: 0;    
+     padding-bottom: percentage(315/560); //alto * 100 / ancho    
+     .video {
+       position: absolute;
+       left: 0;
+       top: 0;
+       height: 100%;
+       width: 100%;
+     }
+  }
+
   .opinion-image {
     max-width: 100%;
   }
@@ -31,7 +44,7 @@
       }
       margin-top: 5px;
       margin-bottom: 0;
-      color: $secondary-text-color;
+      color: $secondary-text-color;      
     }    
   }
 
@@ -54,7 +67,7 @@
   .opinion-image-author {
     max-width: 60px;
     border-radius: 40px;
-    padding-right: 10px;
+    margin-right: 10px;
   }
 
   .opinion-author {

@@ -1,6 +1,8 @@
 @import 'normalize';
 @import '~styles/utils';
 @import '~styles/settings';
+@import 'layout';
+@import 'utils';
 
 body {
   padding-bottom: $footer-height + 60px;
@@ -19,4 +21,14 @@ h1 {
   //margin-top: 10px;
   width: 100%;
     align-items: center;
+}
+
+.important {
+  color: $important-text-color;
+  font-weight: bold; 
+  @include fontSize($font-size);  
+  @include for-tablet-landscape {
+    @include fontSize($font-size-xxl);
+  }
+  
 }

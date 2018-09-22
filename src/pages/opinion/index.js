@@ -16,7 +16,7 @@ if (opinionId) {
       createOpinionDetailComments(opinionId);   
     });
     createOpinionDetailComments(opinionId);      
-  });
+  })
 }
 updateHeader({ title: 'pinions', active: 'opinion' });
 updateCommentForm();
