@@ -56,7 +56,6 @@ esto arrancara el backend con los modelos definidos en el fichero /src/data/db.j
 Si la web se ha levantado correctamente podremos probarla lanzando la siguiente url y se mostraran el home con el listado de opiniones:
 
 ```bash
-GET
 http://localhost:8080/
 
 ```
