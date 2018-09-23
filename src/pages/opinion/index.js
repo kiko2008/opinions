@@ -1,6 +1,8 @@
 import { updateHeader } from 'components/header/header-component';
 import { updateOpinionDetail } from 'components/opinion-detail/opinion-detail-component';
-import { createOpinionDetailComments, updateCommentForm } from 'components/opinion-detail-comments/opinion-detail-comments-component';
+import { createOpinionDetailComments } from 'components/opinion-detail-comments/opinion-detail-comments-component';
+import { updateCommentForm } from 'components/opinion-detail-comments-form/opinion-detail-comments-form-component';
+
 import queryString from 'query-string';
 import OpinionService from 'services/opinion-service';
 import 'styles/main.scss';

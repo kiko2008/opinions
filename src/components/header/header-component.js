@@ -12,11 +12,9 @@ const addActiveClass = (active) => {
 const handleHamburgerClick = () => {
   const menu = document.getElementsByTagName('header')[0];
   const hamburgerLink = document.getElementById('hamburger-icon');
-  console.log(menu.classList);
+  
   hamburgerLink.addEventListener('click', () => {
     menu.classList.toggle('menu-open');
-    console.log(menu.classList);
-   
   });
 };
 
@@ -26,7 +24,6 @@ const updateTitle = (title) => {
 };
 
 export const updateHeader = ({ title, active }) => {
-  console.log('En updateHEader');
   updateTitle(title);
   handleHamburgerClick();
   removeActiveClass();

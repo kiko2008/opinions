@@ -1,14 +1,10 @@
 import PubSub from 'pubsub-js';
 
 const isLiked = id => localStorage.getItem(`opinion-${id}`);
-console.log("isLiked = " + isLiked);
-
-
 const toggleLike = (id) => {
   const likeValue = isLiked(id) === 'true' ? 'false' : 'true';
   localStorage.setItem(`opinion-${id}`, likeValue);
 };
-
 const setInitialLikeValue = (likeButton, liked) => {
   if (liked === 'true') likeButton.children[0].classList.add('fas');
 };
@@ -39,7 +35,7 @@ export const updateOpinionDetail = ({
     class="opinion-image" alt="${title}"></img>`;
   }
 
-  opinion.innerHTML = `
+  opinion.innerHTML = `<article>
     ${ media }   
     <div class="title-container">
       <p title="opinion category" class="title-category">${category}</p>
@@ -59,16 +55,15 @@ export const updateOpinionDetail = ({
       <img src="${photoAuthor}" class="opinion-image-author" ></img>
       <span>${author}</span>
     </p>
-    <input type="hidden" id="idOpinion" value=${id} />`;
+    <input type="hidden" id="idOpinion" value=${id} /></article>`;
 
   const likeButton = document.getElementById('like-button');
-
   setInitialLikeValue(likeButton, isLiked(id));
-
   likeButton.addEventListener('click', () => {
     likeButton.children[0].classList.toggle('fas');
     toggleLike(id);
   });
+  
   PubSub.publish('reload');
 };
 

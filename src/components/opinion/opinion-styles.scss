@@ -15,7 +15,6 @@
       }
       height: 250px;
       object-fit: cover;
-      border-radius: 10px;
     }
 
     .opinion-date {
@@ -23,22 +22,16 @@
       color: $primary-text-color;
     }
 
-    .video-container {
-     // position: relative;
-     // height: 0;        
-      .video {
-        width: 250px;
-        @include for-tablet-landscape {
-          width: 450px;
-        }
-        /*position: absolute;
-        left: 0;
-        top: 0;
-        height: 100%;
-        width: 100%;*/
-      }
-
-    }     
+       
+    .video {
+      width: 250px;
+      height: 250px;
+      @include for-tablet-landscape {
+        width: 450px;
+        height: 250px;
+      }        
+    }
+         
   }
   
   .opinion-title-container {

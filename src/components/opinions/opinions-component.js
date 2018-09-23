@@ -4,11 +4,10 @@ import OpinionService from 'services/opinion-service';
 
 
 const loadOpinions = (opinionsJson, opinions) => {
-  const updatedOpinions = opinions;
   if (opinionsJson.length === 0) {
-    updatedOpinions.innerHTML = '<p class="important">No hay ninguna opinion!!</p>';
+    opinions.innerHTML = '<p class="important">No hay ninguna opinion!!</p>';
   } else {
-    appendComponent(updatedOpinions,
+    appendComponent(opinions,
       opinionsJson.map(opinionData => createOpinion(opinionData)));
   }
 };

@@ -1,66 +1,6 @@
 @import '~styles/settings';
 @import '~styles/utils';
 
-.opinion-detail-comments > p {
-  margin-left: 20px;
-}
-
-.card-comments{
-	margin:0 auto;	
-	max-width: 80%;
-	width: 100%;
-	background-color: $background-color;;	
-	box-shadow:0 1px 4px rgba(0,0,0,.04);
-	border:1px solid rgba(0,0,0,.09);	
-	border-radius:3px;
-	margin-top: 20px;	
-	padding-top: 10px;
-	padding-bottom: 15px;
-	padding-left: 20px;
-	padding-right: 20px;
-}
-
-.flex-center{
-	display: flex;	
-	align-items: center;
-}
-
-.avatar-image{
-	width:56px;
-	height:56px;		
-	border-radius:100%;	
-}
-
-.name-comment{
-  @include fontSize($font-size-xl);
-  @include for-tablet-landscape {
-    @include fontSize($font-size-xxl);
-  }
-	line-height:1.4;
-	padding-left:10px;	
-	
-}
-
-.email-comment {	
-  color: $primary-text-color;
-  @include fontSize($font-size);
-  @include for-tablet-landscape {
-    @include fontSize($font-size-xl);
-  }
-}
-
-.section-comment{
-	max-width:700px;
-  width: 100%;
-  padding-top: 10px;
-  margin:0 auto;
-  overflow-wrap: break-word;	
-  @include fontSize($font-size);
-  @include for-tablet-landscape {
-    @include fontSize($font-size-xxl);
-  }		
-}
-
 .comment-form-wrapper {
   flex-direction: column;
 }
@@ -156,4 +96,3 @@
 p.label-create-comments {
   cursor: pointer;
 }
-
