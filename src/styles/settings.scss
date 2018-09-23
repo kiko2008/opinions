@@ -45,3 +45,12 @@ $breakpoint-desktop: 1200px;
 
 $header-height: 350px;
 $footer-height: 150px;
+
+@keyframes heartRotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}

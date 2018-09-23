@@ -105,5 +105,12 @@
     background-color: transparent;
     color: $important-text-color;
     border: none;
+
+    .fas {
+      animation-name: heartRotate;
+      animation-duration: 1s;
+      animation-iteration-count: initial;
+      animation-direction: alternate;
+    }
   }  
 }
