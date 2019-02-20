@@ -1,6 +1,6 @@
 # Opinions
 
-El desarrollo es una web de publicación de artículos desarrollada con Javascript, webpack y json-server para realizar la simulación del backend.
+El desarrollo es una web de publicación de artículos. Es una web responsive desarrollada con Javascript, webpack, plantillas SASS y json-server para realizar la simulación del backend.
 
 Se han intentado incluir los conocimientos adquiridos en el modulo.
 
@@ -24,7 +24,7 @@ este paso arrancara la aplicación.
 
 ## Generación de la distribución
 
-Para generar el código de para realizar una distribución ejecutaremos el siguiente comando dentro del directorio:
+Para generar el código de para realizar una distribución ejecutaremos el siguiente comando dentro del directorio raiz:
 
 ```bash
 
@@ -32,14 +32,12 @@ npm run build
 
 ```
 
-este paso arrancara la aplicación.
+este generara el directorio dist con los ficheros preparados para instalar en un servidor de produccion.
 
 
 ## Arranque de backend
 
-
-
-Para el backend se ha utilizado json-server, para arrancar el servidor debemos ejecutar el siguiente comando desde el directorio raiz:
+Para el backend se ha utilizado json-server. Para arrancar el servidor debemos ejecutar el siguiente comando desde el directorio raiz:
 
 ```bash
 
@@ -53,7 +51,7 @@ esto arrancara el backend con los modelos definidos en el fichero /src/data/db.j
 
 ### Url de prueba para la web
 
-Si la web se ha levantado correctamente podremos probarla lanzando la siguiente url y se mostraran el home con el listado de opiniones:
+Si la web se ha levantado correctamente podremos probarla lanzando la siguiente url, Se mostraran el home con el listado de opiniones:
 
 ```bash
 http://localhost:8080/
