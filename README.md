@@ -2,8 +2,6 @@
 
 El desarrollo es una web de publicación de artículos. Es una web responsive desarrollada con Javascript, webpack, plantillas SASS y json-server para realizar la simulación del backend.
 
-Se han intentado incluir los conocimientos adquiridos en el modulo.
-
 ## Instalación
 
 Descargar del repositorio la rama master.
